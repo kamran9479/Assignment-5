@@ -15,6 +15,11 @@ document.getElementById('btn-noakhali')
         return;
     }
 
+    if(noakhaliInput <= 0){
+        alert('Invalid input')
+        return;
+    }
+
     if(noakhaliInput > myBalance){
         alert('Not Enough Balance')
         return;
@@ -27,6 +32,13 @@ document.getElementById('btn-noakhali')
     const noakhaliBalanceUpdate = noakhaliBalance + noakhaliInput;
     document.getElementById('noakhalibalance').innerText = noakhaliBalanceUpdate;
 
+    document.getElementById('input-noakhali').value = ''
+
+    const li = document.createElement('li');
+    li.className = ('p-5 rounded-lg bg-slate-300');
+    li.innerText = `BDT : ${noakhaliInput} taka donated for Noakhali (${new Date().toLocaleDateString()} ${new Date().toLocaleTimeString()})`
+    const historyList = document.getElementById('history-list');
+    historyList.insertBefore(li, historyList.firstChild);
 });
 
 
@@ -46,6 +58,11 @@ document.getElementById('btn-feni')
         return;
     }
 
+    if(feniInput <= 0){
+        alert('Invalid input')
+        return;
+    }
+
     if(feniInput > myBalance){
         alert('Not Enough Balance')
         return;
@@ -57,6 +74,14 @@ document.getElementById('btn-feni')
 
     const feniBalanceUpdate = feniBalance + feniInput;
     document.getElementById('fenibalance').innerText = feniBalanceUpdate;
+
+    document.getElementById('input-feni').value = ''
+
+    const li = document.createElement('li');
+    li.className = ('p-5 rounded-lg bg-slate-300');
+    li.innerText = `BDT : ${feniInput} taka donated for Feni (${new Date().toLocaleDateString()} ${new Date().toLocaleTimeString()})`
+    const historyList = document.getElementById('history-list');
+    historyList.insertBefore(li, historyList.firstChild);
 
 });
 
@@ -74,6 +99,11 @@ document.getElementById('btn-quota')
         return;
     }
 
+    if(quotaInput <= 0){
+        alert('Invalid input')
+        return;
+    }
+
     if(quotaInput > myBalance){
         alert('Not Enough Balance')
         return;
@@ -85,5 +115,35 @@ document.getElementById('btn-quota')
 
     const quotaBalanceUpdate = quotaBalance + quotaInput;
     document.getElementById('quotabalance').innerText = quotaBalanceUpdate;
+
+    document.getElementById('input-quota').value = ''
+
+    const li = document.createElement('li');
+    li.className = ('p-5 rounded-lg bg-slate-300');
+    li.innerText = `BDT : ${quotaInput} taka donated for Quota injured people (${new Date().toLocaleDateString()} ${new Date().toLocaleTimeString()})`
+    const historyList = document.getElementById('history-list');
+    historyList.insertBefore(li, historyList.firstChild);
+
+});
+
+
+
+document.getElementById('history')
+.addEventListener('click', function(){
+
+    document.getElementById('full-section').classList.add('hidden');
+    document.getElementById('history-container').classList.remove('hidden');
+
+    
+    // document.getElementById('history').classList.add('bg-lime-300 border-solid font-bold');
+    // document.getElementById('donation').classList.remove('bg-lime-300 border-solid font-bold');
+
+});
+document.getElementById('donation')
+.addEventListener('click', function(){
+
+    document.getElementById('full-section').classList.remove('hidden');
+    document.getElementById('history-container').classList.add('hidden');
+    
 
 });
