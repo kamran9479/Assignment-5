@@ -41,7 +41,7 @@ document.getElementById('btn-noakhali')
 
     const li = document.createElement('li');
     li.className = ('p-5 rounded-lg bg-slate-300');
-    li.innerText = `BDT : ${noakhaliInput} taka donated for Noakhali (${new Date().toLocaleDateString()} ${new Date().toLocaleTimeString()})`
+    li.innerText = `BDT : ${noakhaliInput} taka donated for Noakhali (${new Date().toLocaleDateString()} ,  ${new Date().toLocaleTimeString()})`
     const historyList = document.getElementById('history-list');
     historyList.insertBefore(li, historyList.firstChild);
 });
@@ -87,7 +87,7 @@ document.getElementById('btn-feni')
 
     const li = document.createElement('li');
     li.className = ('p-5 rounded-lg bg-slate-300');
-    li.innerText = `BDT : ${feniInput} taka donated for Feni (${new Date().toLocaleDateString()} ${new Date().toLocaleTimeString()})`
+    li.innerText = `BDT : ${feniInput} taka donated for Feni  (${new Date().toLocaleDateString()} , ${new Date().toLocaleTimeString()})`
     const historyList = document.getElementById('history-list');
     historyList.insertBefore(li, historyList.firstChild);
 
@@ -130,7 +130,7 @@ document.getElementById('btn-quota')
 
     const li = document.createElement('li');
     li.className = ('p-5 rounded-lg bg-slate-300');
-    li.innerText = `BDT : ${quotaInput} taka donated for Quota injured people (${new Date().toLocaleDateString()} ${new Date().toLocaleTimeString()})`
+    li.innerText = `BDT : ${quotaInput} taka donated for Quota injured people (${new Date().toLocaleDateString()} , ${new Date().toLocaleTimeString()})`
     const historyList = document.getElementById('history-list');
     historyList.insertBefore(li, historyList.firstChild);
 
