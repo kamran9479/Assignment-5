@@ -1,4 +1,6 @@
 
+
+
     // noakhali addevenfunction
 
 document.getElementById('btn-noakhali')
@@ -33,6 +35,9 @@ document.getElementById('btn-noakhali')
     document.getElementById('noakhalibalance').innerText = noakhaliBalanceUpdate;
 
     document.getElementById('input-noakhali').value = ''
+
+    // modal function
+    my_modal_1.showModal();
 
     const li = document.createElement('li');
     li.className = ('p-5 rounded-lg bg-slate-300');
@@ -76,6 +81,9 @@ document.getElementById('btn-feni')
     document.getElementById('fenibalance').innerText = feniBalanceUpdate;
 
     document.getElementById('input-feni').value = ''
+ 
+    // modal function
+    my_modal_1.showModal();
 
     const li = document.createElement('li');
     li.className = ('p-5 rounded-lg bg-slate-300');
@@ -118,6 +126,8 @@ document.getElementById('btn-quota')
 
     document.getElementById('input-quota').value = ''
 
+    my_modal_1.showModal();
+
     const li = document.createElement('li');
     li.className = ('p-5 rounded-lg bg-slate-300');
     li.innerText = `BDT : ${quotaInput} taka donated for Quota injured people (${new Date().toLocaleDateString()} ${new Date().toLocaleTimeString()})`
@@ -128,15 +138,22 @@ document.getElementById('btn-quota')
 
 
 
+// donation button and history button class add and remove function
+
+const history = document.getElementById('history');
+const donation = document.getElementById('donation');
+
 document.getElementById('history')
 .addEventListener('click', function(){
 
     document.getElementById('full-section').classList.add('hidden');
     document.getElementById('history-container').classList.remove('hidden');
-
     
-    // document.getElementById('history').classList.add('bg-lime-300 border-solid font-bold');
-    // document.getElementById('donation').classList.remove('bg-lime-300 border-solid font-bold');
+    
+    history.classList.add('bg-lime-300');
+    donation.classList.remove('bg-lime-300');
+
+
 
 });
 document.getElementById('donation')
@@ -144,6 +161,29 @@ document.getElementById('donation')
 
     document.getElementById('full-section').classList.remove('hidden');
     document.getElementById('history-container').classList.add('hidden');
+
+    history.classList.remove('bg-lime-300');
+    donation.classList.add('bg-lime-300');
     
 
 });
+
+
+document.getElementById('blog').addEventListener('click', function(){
+
+    window.location.href = './blog.html';
+});
+
+// home button
+
+document.getElementById('blog').addEventListener('click', function(){
+
+    window.location.href = './blog.html';
+});
+
+// home button
+// document.getElementById('home').addEventListener('click', function(){
+
+//     window.location.href = './index.html';
+// });
+        //   Anchor tag use hoyeche home.html file e

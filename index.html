@@ -16,7 +16,7 @@
             <nav class="flex items-center justify-between lg:w-11/12 mx-auto">
 
                 <div class="w-4/12">
-                    <button class="btn bg-lime-300 font-bold px-10">Blog</button>
+                    <button id="blog" class="btn bg-lime-300 font-bold px-10">Blog</button>
                 </div>
 
                 <div class="w-4/12 flex items-center justify-center space-x-2">
@@ -34,8 +34,9 @@
         </div>
 
         <div class="flex justify-center space-x-3 mt-10">
-            <button id="donation" class="btn bg-lime-300 rounded-md border-solid font-bold px-14">Donation</button>
-            <button id="history" class="btn rounded-md border-gray-300 px-14">History</button>
+            <button id="donation"
+                class="btn bg-lime-300 rounded-md border-solid font-bold px-14">Donation</button>
+            <button id="history" class="btn rounded-md font-bold border-gray-300 px-14">History</button>
         </div>
 
     </header>
@@ -53,8 +54,8 @@
                 <div class="space-y-4 lg:w-6/12">
                     <button class="flex items-center space-x-2 bg-slate-200 p-3 rounded-lg">
                         <img src="./assets/coin.png" alt="coin-icon">
-                        <span id="noakhalibalance" class=" text-gray-500">5000</span>
-                        <p class="">BDT</p>
+                        <span id="noakhalibalance" class="font-bold">5000</span>
+                        <p class="font-semibold">BDT</p>
                     </button>
 
                     <h1 class="text-xl font-bold">Donate for Flood at Noakhali, Bangladesh</h1>
@@ -78,8 +79,8 @@
                 <div class="space-y-2 lg:w-6/12">
                     <button class="flex items-center space-x-2 bg-slate-200 p-3 rounded-lg">
                         <img src="./assets/coin.png" alt="coin-icon">
-                        <span id="fenibalance" class=" text-gray-500">5000</span>
-                        <p class="">BDT</p>
+                        <span id="fenibalance" class="font-bold">5000</span>
+                        <p class="font-semibold">BDT</p>
                     </button>
 
                     <h1 class="text-xl font-bold">Donate for Flood Relief in Feni,Bangladesh</h1>
@@ -104,8 +105,8 @@
                 <div class="space-y-2 lg:w-6/12">
                     <button class="flex items-center space-x-2 bg-slate-200 p-3 rounded-lg">
                         <img src="./assets/coin.png" alt="coin-icon">
-                        <span id="quotabalance" class=" text-gray-500">5000</span>
-                        <p class="">BDT</p>
+                        <span id="quotabalance" class="font-bold">5000</span>
+                        <p class="font-semibold">BDT</p>
                     </button>
 
                     <h1 class="text-xl font-bold">Aid for Injured in the Quota Movement</h1>
@@ -131,6 +132,25 @@
             </ul>
 
         </div>
+
+
+
+
+
+        <!-- Open the modal using ID.showModal() method -->
+        
+        <dialog id="my_modal_1" class="modal">
+            <div class="modal-box">
+                <h3 class="text-2xl font-bold text-center">Donation Successful</h3>
+                <p class="py-4 mx-auto text-center mt-3 text-lg font-semibold">May Allah accept your donation and will give your rewards in Heaven</p>
+                <div class="modal-action">
+                    <form method="dialog">
+                        <!-- if there is a button in form, it will close the modal -->
+                        <button class="btn bg-lime-300">Close</button>
+                    </form>
+                </div>
+            </div>
+        </dialog>
 
     </main>
 
